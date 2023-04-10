@@ -1,0 +1,219 @@
+/* estilização geral */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Sono', sans-serif;
+    color: #333;
+  }
+
+/* aplicar cor de fundo e espaçamento */
+body{
+  padding-top: 32px;
+  background-color: #333;
+}
+
+/* para especificar o comportamento visual da ação */
+.hide {
+    display: none;
+  }
+
+/* definir cores, espaçamentos e arredondamento da borda do container que engloba todos os elementos */
+.todo-container {
+    max-width: 800px;
+    margin: 3rem auto 0;
+    background-color: #ebe9e2;
+    padding: 1.5rem;
+    border-radius: 15px;
+  }
+
+/* estilização aplicada apenas aos título do container, como centralização e espaçamento */
+.todo-container header {
+    text-align: center;
+    padding: 0 1rem 1rem;
+    border-bottom: 1px solid #ccc;
+  }
+  
+/* definindo espaçamento entre os seguintes formulários  */
+#todo-form,#edit-form {
+    padding: 1rem;
+    border-bottom: 1px solid #ccc;
+  }
+  
+/* definindo visual e espaçamento dos "titulos" dos formulários */
+#todo-form p,#edit-form p {
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+  }
+
+/* definição de espaçamento do input text das tarefas */
+.form-control input {
+    margin-right: 0.3rem;
+  }
+  
+/* definilção do espaçamento e formato de display da área de filtro */
+#toolbar {
+    padding: 1rem;
+    border-bottom: 1px solid #ccc;
+    display: flex;
+  }
+
+/* definição do espaçamento do título da área de filtro */
+#toolbar h4 {
+    margin-bottom: 0.5rem;
+  }
+  
+/* formato de apresentação, espaçamento e cor da lista de tarefas */
+.todo {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 1rem 1rem;
+    border-bottom: 1px solid #ddd;
+    transition: 0.3s;
+  }
+
+/* espaçamento do titulo da lista de tarefas */
+.todo h3 {
+    flex: 1;
+    font-size: 0.9rem;
+  }
+
+/* decoração quando uma tarefa for marcada como feita */
+.done h3 {
+    color: #000;
+    text-decoration: line-through;
+    font-style: italic;
+  }
+
+/* ajustando tamanho do input */
+input{
+  width: 30%;
+}
+
+
+/* BOTÕES */
+
+/* Definindo o visual do botão "adicionar tarefa"  */
+#add {
+  padding: 0.6em;
+  border: 0px solid transparent;
+  background-color: #fff;
+  color: rgb(32, 85, 1);
+  font-weight: bold;
+  border-radius: 8px;
+  font-family: 'Sono', sans-serif;
+  transition: 0.4s;
+  cursor: pointer;
+}
+
+/* transição de cores para visual mais interativo para o botão */
+#add:hover{
+  color: #fff;
+  background-color: rgba(32, 85, 1, 0.616);
+}
+
+/* Definindo o visual do botão "done" */
+.finish-todo {
+  cursor: pointer;
+  justify-content: center;
+  padding: 5px;
+  border: transparent;
+  background-color: #ebe9e2;
+  color: rgb(32, 85, 1);
+  font-weight: bold;
+  border-radius: 8px;
+  font-weight: bold;
+  font-size: 13px;
+  transition: 0.4s;
+}
+
+/* transição de cores para visual mais interativo para o botão */
+.finish-todo:hover{
+  color: #ebe9e2;
+  background-color: rgba(32, 85, 1, 0.616);
+}
+
+/* Definindo o visual do botão "delete"  */
+.remove-todo{
+  cursor: pointer;
+  justify-content: center;
+  padding: 5px;
+  border: transparent;
+  background-color: #ebe9e2;
+  color: rgba(148, 3, 3, 0.822);
+  font-weight: bold;
+  border-radius: 8px;
+  font-weight: bold;
+  font-size: 13px;
+  transition: 0.4s;
+}
+
+/*  transição de cores para visual mais interativo para o botão de deletar tarefas */
+.remove-todo:hover{
+  background-color: rgba(148, 3, 3, 0.664);
+  color: #ebe9e2;
+}
+
+/* Definindo o visual do botão "edit"  */
+.edit-todo {
+  cursor: pointer;
+  justify-content: center;
+  padding: 5px;
+  border: transparent;
+  background-color: #ebe9e2;
+  color: rgba(17, 3, 148, 0.822);
+  font-weight: bold;
+  border-radius: 8px;
+  font-weight: bold;
+  font-size: 13px;
+  transition: 0.4s;
+}
+
+/*interação quando o mouse passar por cima do elemento  */
+.edit-todo:hover{
+  background-color: rgba(17, 3, 148, 0.562);
+  color: #ebe9e2;
+}
+
+/* Definindo o visual do botão de cancelar a edição */
+#cancel-edit-btn{
+  cursor: pointer;
+  justify-content: center;
+  padding: 5px;
+  border: transparent;
+  background-color: #fff;
+  color: rgba(148, 3, 3, 0.822);
+  font-weight: bold;
+  border-radius: 8px;
+  font-weight: bold;
+  font-size: 13px;
+  transition: 0.4s;
+}
+
+/*interação quando o mouse passar por cima do elemento   */
+#cancel-edit-btn:hover{
+  background-color: rgba(148, 3, 3, 0.664);
+  color: #fff;
+}
+
+/* Definindo o visual do botão de atualizar a edição feita */
+#submit-edit{
+  cursor: pointer;
+  justify-content: center;
+  padding: 5px;
+  border: transparent;
+  background-color: #fff;
+  color: rgb(32, 85, 1);
+  font-weight: bold;
+  border-radius: 8px;
+  font-weight: bold;
+  font-size: 13px;
+  transition: 0.4s;
+}
+
+/* interação quando o mouse passar por cima do elemento  */
+#submit-edit:hover{
+  color: #fff;
+  background-color: rgba(32, 85, 1, 0.616);
+}
