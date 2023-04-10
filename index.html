@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="styling.css" rel="stylesheet">
+    <!-- associando o arquivo css para estilizar a página html -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sono:wght@300&display=swap" rel="stylesheet">
+    <!-- adicionando uma fonte do google fonts, para utilização no visual da página -->
+    <title>To-do list</title>
+  </head>
+  <body>
+    <div class="todo-container">
+      <header>
+        <h1>To-do list</h1>
+      </header>
+
+      <!-- formulário para adicionar uma tarefa á lista  -->
+      <form id="todo-form">
+        <p>Add your task</p>
+        <div class="form-control">
+          <input
+            type="text"
+            id="todo-input"
+            placeholder="what you gotta do ?"
+          />
+          <button type="submit" id="add">Add task</button>
+        </div>
+      </form>
+
+      <!-- "formulário" para editar a tarefa escolhida -->
+      <form id="edit-form" class="hide">
+        <p>Edit your task</p>
+        <div class="form-control">
+          <input type="text" id="edit-input" />
+          <button type="submit" id="submit-edit">submit</button>
+        </div>
+        <button id="cancel-edit-btn">Cancel</button>
+      </form>
+
+      <!-- select dropdown para fazer a filtragem dos tipos de "status" das tarefas -->
+      <div id="toolbar">
+        <div id="filter">
+          <h4>Filter:</h4>
+          <select id="filter-select">
+            <option value="all">All</option>
+            <option value="done">Done</option>
+            <option value="todo">To do</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- "container" onde ficará os elementos criados como tarefas -->
+      <div id="todo-list">
+      </div>
+    </div>
+
+    <!-- ligação entre html e o arquivo js pra deixar a página interativa -->
+    <script src="act.js"></script>
+  </body>
+</html>
